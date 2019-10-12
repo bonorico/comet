@@ -1,0 +1,12 @@
+Package: comet
+Type: Package
+Title: COmpeting-risks METa-analysis
+Version: 1.0
+Date: 2019-10-12
+Author: Federico Bonofiglio 
+Maintainer: Federico Bonofiglio <bono@imbi.uni-freiburg.de>
+Depends: R (>= 3.3.3), meta, ggplot2, scales, gridExtra
+Description: Meta-analysis (MA) of aggregate (right-censored) survival data with competing events. The package estimates study-specific cumulative incidence functions (CIFs) for each competing event and (treatment) group, based on an assumption of constant transition hazard (cause-specific ratio between total events-count and total time-at-risk). CIF is an unbiased estimate of the event-type cumulative probability, a useful prognostic measure for the occurrence of a type of event (say death from cause A) in presence of other competing ones (say other causes of death, B, C, ...). Focus is on pooling of CIF ratios, a proposed measure of group (treatment) effect, accommodating for competing events and similar to a time-dependent risk ratio (RR). Pooled cause-specific hazard ratios (HRs) are also returned. This analysis replaces conventional survival MA of only HRs that might result in an incomplete measure of group effect, due to competing events. Also any attempt to do conventional Kaplan-Meier estimation for any single event (neglecting the others) could yield biased results here, being CIF the correct probabilistic alternative.
+License: GPL (>= 3) 
+URL: https://github.com/bonorico/metacinc
+RoxygenNote: 6.1.1
