@@ -844,8 +844,7 @@ cat("- DerSimonian-Laird estimator for tau^2.\n")
 # dependency: ggplot2
 
 
-
- plot.metacif <- function(object, contr=1,
+plot.metacif <- function(object, contr=1,
                           ev_lab=NULL, arm_lab=NULL,
                           x_lab=NULL, y_lab=NULL,title=NULL,
                           pred=FALSE, hazr=TRUE, # prediction scale
@@ -931,13 +930,13 @@ cat("- DerSimonian-Laird estimator for tau^2.\n")
            if(!is.null(y_lab))
                yl <- ylab(y_lab)
        
-       print(
+     #  print(
            
- pl + xlim + fg + geom + bckgr + lg + yl + xl + tl +th + tmtr
+ out <-  pl + xlim + fg + geom + bckgr + lg + yl + xl + tl +th + tmtr
            
  
            
-           )
+     #      )
 
    }  # end if CIFs
 
@@ -1122,20 +1121,20 @@ DFR$MODEL <- with(DFR,
 
 
 
-        print(
+   #     print(
 
-   pl + xlim + ylim + panel + one + geom1 
-            + geom2 + bckgr + xl + yl + tl + th
-            + geom3  + lgnd + txtl + txtc + txtu
-            + txt1 + txt2 + lgnd2 + lgtr + pltck
-           ) 
+  out <- pl + xlim + ylim + panel + one + geom1 + geom2 + bckgr + xl + yl + tl + th + geom3  + lgnd + txtl + txtc + txtu + txt1 + txt2 + lgnd2 + lgtr + pltck
+   #        ) 
 
      
 
    }  # end if RR
    
 
-    } # end plot.metacif
+  out
+     
+   } # end plot.metacif
+
 
 
 ##################################
